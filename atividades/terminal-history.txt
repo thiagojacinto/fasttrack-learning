@@ -1,0 +1,103 @@
+  
+  519  git flow init
+  520  git flow feature start add_hello
+  521  branch
+  522  git branch
+  524  git c "feat: adicionando HelloGit.txt"
+  525  git s
+  526  git s
+  527  git c "feat: adicionando HelloGit.txt"
+  528  git push origin feat/add_hello
+  529  git flow feature publish feat/add_hello
+  530  git flow feature publish add_hello
+  531  git flow feature pull add_hello
+  532  git flow feature pull feat/add_hello
+  533  git flow feature finish add_hello
+  534  git branch
+  535  git l
+  536  git push origin develop
+  537  git fetch
+  538  git branch
+  539  git flow release start 0.1.0
+  541  git branch
+  542  git flow release publish 0.1.0
+  543  git flow release finish 0.1.0
+  544  git branch
+  545  git fetch
+  546  git push origin main
+  547  git branch
+  548  git checkout develop
+  549  git branch
+  550  git flow feature start prints_out
+  551  git flow feature publish prints_out
+  552  git s
+  553  git c "funcionalidade principal"
+  554  git flow release pull prints_out
+  555  git flow release track prints_out
+  556  git s
+  557  git push
+  558  git s
+  559  git flow feature finish prints_out
+  560  git branch
+  561  git push
+  562  git pull
+  563  git flow release start 0.2.0
+  564  git s
+  565  git c "fix: exibir texto correto"
+  566  git push
+  567  git flow release publish 0.2.0
+  568  git s
+  569  git flow hotfix start 0.2.0
+  570  git flow hotfix publish 0.2.0
+  571  git c "hotfix: descricao errada no HelloGit"
+  572  git push
+  573  git flow hotfix finish 0.2.0
+  574  git branch
+  575  git fetch
+  576  git push
+  577  git push origin develop
+  578  git l
+  579  git rebase 071ae0f
+  580  git branch
+  581  git l
+  582  git log --a
+  583  git log
+  584  clear
+  585  git reflog
+  586  git reset HEAD@{3}
+  587  git log
+  588  git l
+  589  git branch
+  590  git checkout release/0.2.0
+  591  git flow release finish 0.2.0
+  592  git push
+  593  git checkout main
+  594  git push
+  595  git checkout develop
+  596  git push
+  597  git pull
+  598  git pull develop develop
+  599  git pull origin develop
+  600  git checkout main
+  601  git flow hotfix start 0.2.1
+  602  git c "hotfix: print ao inves de puts"
+  603  git flow hotfix finish 0.2.1
+  604  git branch
+  605  git push
+  606  git push origin develop
+  607  git checkout main
+  608  git push
+  609  git branch
+  610  git checkout develop
+  611  git flow feature start 0.2.5-alpha
+  612  git c "feat: utilidade de soma"
+  613  git flow feature publish 0.2.5-alpha
+  614  git flow feature finish 0.2.5-alpha
+  615  git push
+  616  git push origin develop
+  617  git flow release start v_alpha
+  618  git flow release finish v_alpha
+  619  git checkout main
+  620  git checkout develop
+  621  git checkout main
+  622  git push
