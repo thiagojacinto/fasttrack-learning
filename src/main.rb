@@ -1,1 +1,1 @@
-puts "Hello, Fast Track"
+print "Hello, Fast Track"
