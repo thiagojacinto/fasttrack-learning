@@ -1,1 +1,3 @@
 Hello GIT!
+
+This was an error. HOTFIX APPLIED.
