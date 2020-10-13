@@ -13,9 +13,19 @@
 // the project's config changing)
 
 /**
+ * cypress-cucumber-preprocessor importing
+ */
+const cucumber = require('cypress-cucumber-preprocessor').default;
+
+/**
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+
+  /**
+   * cypress-cucumber-preprocessor configuring.
+   */
+  on('file:preprocessor', cucumber());
 }
