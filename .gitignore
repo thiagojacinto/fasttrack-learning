@@ -1,0 +1,4 @@
+automated/node_modules
+automated/cypress/screenshots/**
+.vscode
+automated/results
