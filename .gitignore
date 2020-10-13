@@ -1,4 +1,6 @@
 automated/node_modules
 automated/cypress/screenshots/**
-.vscode
+automated/cypress/integration/examples
+automated/cypress/fixtures/example.json
 automated/results
+.vscode
