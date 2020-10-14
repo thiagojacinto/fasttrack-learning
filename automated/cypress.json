@@ -1,3 +1,4 @@
-{
+{   
+    "baseUrl": "https://www.kabum.com.br",
     "testFiles": "**/*.feature"
 }
