@@ -1,4 +1,7 @@
 {   
-    "baseUrl": "https://www.kabum.com.br",
-    "testFiles": "**/*.feature"
+    "baseUrl": "https://m.kabum.com.br",
+    "testFiles": "**/*.feature",
+
+    "video": false,
+    "nodeVersion": "system"
 }
