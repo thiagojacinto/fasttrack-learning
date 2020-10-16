@@ -1,4 +1,5 @@
 /* global Given, When, And, Then */
+/// <reference types="Cypress" />
 
 Given(`que esteja no carrinho`, () => {});
 
@@ -21,5 +22,4 @@ Then(`deve ser exibida mensagem "Ocorreu um erro ao carregar as opções de fret
 When(`inserir um cupom {string}`, (cupom) => {});
 Then(`será calculado um desconto.`, () => {});
 
-//When(`inserir um CEP inválido`, () => {});
 Then(`deve ser exibida mensagem "CUPOM INVÁLIDO, EXPIRADO OU JÁ UTILIZADO.".`, () => {});
