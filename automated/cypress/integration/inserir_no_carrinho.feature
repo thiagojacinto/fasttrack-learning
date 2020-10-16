@@ -1,9 +1,9 @@
 #language: en
 
-Feature: Carrinho
+Feature: Inserir no carrinho
 
   Background:
-    Given esteja no home
+    Given esteja na home
 
   Scenario: Adicionar um item 
     When inserir um item no carrinho
