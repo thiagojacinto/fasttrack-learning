@@ -1,7 +1,11 @@
 /* global Given, When, And, Then */
 /// <reference types="Cypress" />
 
-Given(`que esteja no carrinho`, () => {});
+import ShoppingCart from "../../support/pageObjects/ShoppingCart/ShoppingCart.page";
+
+Given(`que esteja no carrinho`, () => {
+    ShoppingCart.acessarCarrinho();
+});
 
 When(`remover um item contido no carrinho`, () => {});
 Then(`este item não deve ser exibido.`, () => {});
