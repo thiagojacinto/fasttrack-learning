@@ -7,9 +7,9 @@ Feature: Inserir no carrinho
 
   Scenario: Adicionar um item 
     When inserir um item no carrinho
-    Then deve exibí-lo no carrinho
+    Then deve exibir 1 item no carrinho
 
   Scenario: Adicionar mais de um item
     When inserir um item no carrinho
     And inserir outro item
-    Then deve exibí-los no carrinho
+    Then deve exibir 2 item(s) no carrinho
