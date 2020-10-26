@@ -15,15 +15,12 @@ When(`inserir um item no carrinho`, () => {
 });
 
 Then(`deve exibir {int} item(s) no carrinho`, (numeroDeItens) => {
+    ShoppingCart.acessarCarrinho();
     ShoppingCart.exibirNoCarrinho(numeroDeItens);
 });
 
 And(`inserir outro item`, () => {
-    HomePage.acessarHome();
+    ProductView.voltarAHome();
     HomePage.escolheProduto();
     ProductView.adicionarAoCarrinho();
 });
-
-// Then(`deve exibí-los no carrinho`, () => {
-//     return false;
-// });
