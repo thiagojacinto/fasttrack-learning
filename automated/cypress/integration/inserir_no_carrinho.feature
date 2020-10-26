@@ -1,16 +1,16 @@
-#language: en
+#language:pt
 
-Feature: Inserir no carrinho
+Funcionalidade: Inserir no carrinho
 
-  Background:
-    Given esteja na home
+  Contexto:
+    Dado esteja na home
 
-  Scenario: Adicionar um item 
-    When inserir um item no carrinho
-    Then deve exibir 1 item no carrinho
+  Cenário: Adicionar um item 
+    Quando inserir um item no carrinho
+    Então deve exibir 1 item no carrinho
 
   @focus
-  Scenario: Adicionar mais de um item
-    When inserir um item no carrinho
-    And inserir outro item
-    Then deve exibir 2 item(s) no carrinho
+  Cenário: Adicionar mais de um item
+    Quando inserir um item no carrinho
+    E inserir outro item
+    Então deve exibir 2 item(s) no carrinho
