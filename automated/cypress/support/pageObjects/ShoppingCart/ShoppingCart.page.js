@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 
 import componentes from "./componentes";
+import homeComponentes from "../Home/componentes";
 
 class ShoppingCart {
   /**
@@ -8,7 +9,8 @@ class ShoppingCart {
    */
   acessarCarrinho() {
     return cy
-      .visit(`/carrinho`);
+      .get(homeComponentes.botaoCarrinho)
+      .click();
   }
 
   /**
@@ -17,7 +19,6 @@ class ShoppingCart {
   exibirNoCarrinho(quantidade = 1) {
     return cy
       .get(componentes.listaNoCarrinho)
-      .children()
       .should("have.length", quantidade);
   }
   /**
