@@ -6,8 +6,17 @@ class ProductView {
      * Clica no botão "Adicionar ao Carrinho"
      */
     adicionarAoCarrinho(){
-        cy
+        cy  
+            .get(componentes.opcoes)
+            .eq(0)
+            .click()
             .get(componentes.botaoAdicionar)
+            .click();
+    }
+
+    voltarAHome() {
+        cy
+            .get(componentes.botaoVoltar)
             .click();
     }
 }
