@@ -1,7 +1,7 @@
 {   
     "baseUrl": "https://m.kabum.com.br",
     "testFiles": "**/*.feature",
-
+    "ignoreTestFiles": "*.js",
     "video": false,
     "nodeVersion": "system"
 }
