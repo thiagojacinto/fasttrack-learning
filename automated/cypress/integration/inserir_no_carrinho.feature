@@ -9,8 +9,7 @@ Funcionalidade: Inserir no carrinho
     Quando inserir um item no carrinho
     Então deve exibir 1 item no carrinho
 
-  @focus
   Cenário: Adicionar mais de um item
     Quando inserir um item no carrinho
     E inserir outro item
-    Então deve exibir 2 item(s) no carrinho
+    Então deve exibir 2 items no carrinho
