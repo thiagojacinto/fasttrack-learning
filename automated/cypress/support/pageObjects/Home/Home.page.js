@@ -13,7 +13,7 @@ class Home {
      * Escolhe um produto da lista de produtos.
      */
     escolheProduto() {
-        let random = Math.floor(Math.random() * 10);
+        let random = Math.floor(Math.random() * 21);
         cy
             .log(`Selecionando produto randomico n. ${random}`)
             .get(componentes.listaProdutos)
