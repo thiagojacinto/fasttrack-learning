@@ -14,5 +14,6 @@ export default {
     botaoAumentarQuantidade: "div.items__quantity__controls button.increase__quantity",
     botaoReduzirQuantidade: "div.items__quantity__controls button.decrease__quantity",
     campoQuantidade: "div.items__quantity__controls p.item__quantity",
-    campoValorTotal: "div.cart__modal strong"
+    campoValorTotal: "div.cart__modal strong",
+    widgetQuantidade: "span.cart__counting"
 } 
