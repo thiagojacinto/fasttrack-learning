@@ -1,5 +1,5 @@
 {   
-    "baseUrl": "https://m.kabum.com.br",
+    "baseUrl": "https://rio-negro-store.netlify.app/",
     "testFiles": "**/*.feature",
     "ignoreTestFiles": "*.js",
     "video": false,
