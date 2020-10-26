@@ -9,7 +9,7 @@ export default {
     // campoCupom: "html > body > div:nth-of-type(5) > section > section > section > div:nth-of-type(4) > form > input",
     // notificacao: "#notification-wrapper"
 
-    listaNoCarrinho: "div.cart__modal > article",
+    listaNoCarrinho: "div.cart__modal article",
     botaoRemover: "div.items__quantity__controls button.remove__item", 
     botaoAumentarQuantidade: "div.items__quantity__controls button.increase__quantity",
     botaoReduzirQuantidade: "div.items__quantity__controls button.decrease__quantity",
