@@ -1,0 +1,7 @@
+{   
+    "baseUrl": "https://rio-negro-store.netlify.app/",
+    "testFiles": "**/*.feature",
+    "ignoreTestFiles": "*.js",
+    "video": false,
+    "nodeVersion": "system"
+}

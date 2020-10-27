@@ -1,0 +1,8 @@
+automated/node_modules
+automated/cypress/screenshots/**
+automated/cypress/integration/examples
+automated/cypress/fixtures/example.json
+automated/results
+
+.vscode
+automated/.DS_Store
