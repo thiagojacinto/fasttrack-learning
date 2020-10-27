@@ -1,5 +1,8 @@
 /// <reference types="Cypress" />
 
+import HomePage from "../Home/Home.page";
+import ProductView from "../ProductView/ProductView.page";
+
 import componentes from "./componentes";
 import homeComponentes from "../Home/componentes";
 
@@ -22,11 +25,23 @@ class ShoppingCart {
       .should("have.length", quantidade);
   }
   /**
+   * Procura na página por uma determinada mensagem.
+   * @param {String} mensagem 
+   */
+  procurarPorMensagem(mensagem) {
+    if (!mensagem) return false;
+
+    return cy
+      .contains(mensagem)
+      .should("exist");
+  }
+
+  /**
    * Procura e clica no primeiro botão contendo "Remover"
    */
   removerPrimeiroItem() {
     return cy
-      .get(componentes.listaNoCarrinho)
+      .get(componentes.botaoRemover)
       .within((item) => {
         cy
         .contains("Remover")
@@ -36,41 +51,82 @@ class ShoppingCart {
   }
 
   /**
-   * Procura na página por uma determinada mensagem.
-   * @param {String} mensagem 
+   * Varre os itens do carrinho e os remove um por um
    */
-  procurarPorMensagem(mensagem) {
-    if (!mensagem) return false;
+  removerTodos() {
+    return cy
+      .get(componentes.botaoRemover)
+      .each(() => {
+        cy
+          .contains("Remover")
+          .click();
+      });
+  }
+  
+  /**
+   * Adiciona items ao carrinho, randomicamente, entre 2 a 5 itens.
+   */
+  popularCarrinho() {
+    let random = Math.floor(Math.random() * 3 + 2);
+    cy.log(`Adicionando ${random} itens randomicamente ao carrinho...`);
+    for (let index = 0; index < random; index++) {
 
-    return cy.contains(mensagem);
+        HomePage.escolheProduto();
+        ProductView.adicionarAoCarrinho();
+        ProductView.voltarAHome();
+    }
+    return random;
   }
 
   /**
-   * Insere o CEP no campo correspondente
-   * @param {String} cep 
+   * Retorna o conteúdo do Valor Total do carrinho
    */
-  inserirCep(cep) {
-    if (!cep) return false;
-
+  getPrecoTotal() {
+    // TODO
     return cy
-      .get(componentes.campoCep)
-      .type(cep)
-      .get(componentes.botaoCep)
+      .get(componentes.campoValorTotal)
+      .then($preco => {
+        return $preco.text();
+      });
+  }
+
+  /**
+   * Compara as mudanças entre preços após alterações na composição do carrinho
+   * @param {*} antes 
+   * @param {*} depois 
+   */
+  verificarAlteracaoDePreco(antes, depois) {
+
+    cy.get(antes)
+      .then((precoAnterior) => {
+
+        cy.get(depois)
+          .then((precoPosterior) => {
+
+            expect(precoAnterior).to.be.not.equal(precoPosterior);
+
+          })
+      })
+
+  }
+
+  /**
+   * Aumenta a quantidade de um dos itens do carrinho
+   */
+  aumentarQuantidadeDeItem() {
+    cy.get(componentes.botaoAumentarQuantidade)
+      .first()
       .click();
   }
 
   /**
-   * Insere um cupom no campo correspondente
-   * @param {String} cupom 
+   * Verifica se a quantidade de itens corresponde no Widget do Carrinho
+   * @param {Number} quantidade 
    */
-  inserirCupom(cupom) {
-    if (!cupom) return false;
-
+  verificarWidgetContador(quantidade) {
     return cy
-      .get(componentes.campoCupom)
-      .type(cupom)
-      .get(componentes.botaoCupom)
-      .click();
+      .get(componentes.widgetQuantidade)
+      .should("contain.text", quantidade);
   }
 }
 
