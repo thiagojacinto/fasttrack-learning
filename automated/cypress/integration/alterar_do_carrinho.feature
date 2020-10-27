@@ -13,7 +13,7 @@ Funcionalidade: Alterar do carrinho
   Cenário: Remover todos os itens
     Quando remover todos os itens contido no carrinho
     Então deve ser exibida mensagem "O seu carrinho está vazio :("
-  @focus
+
   Cenário: Alterar quantidade de um item
     Quando aumentar a quantidade de um item contido no carrinho
     Então a quantidade será acrescida em uma unidade
