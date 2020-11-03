@@ -25,6 +25,7 @@
 	c = !git add . && git commit -m
 	ca = !git add --all && git commit -m
 	amend = !git commit --amend --no-edit
+	s = !git status
 	l = !git log --pretty=format:'%C(blue)%h %C(red)|%C(yellow)%d %C(red)[ %C(cyan)%s %C(red)] - %C(green)%cn%C(red), %C(white)%cr%C(red)'
 [push]
 	followTags = true
